@@ -16,7 +16,7 @@ public class DomParser {
 
     String fileName;
     HashMap missingItems = new HashMap();
-    
+
 
 
 
@@ -56,7 +56,7 @@ public class DomParser {
                     if(nelement.getAttribute("Width") == ""){
                         System.out.println("The Width is missing on Rectangle No: " + i);
                         missingItems.put(i," Width is missing");
-                        missingItemsNumber = missingItemsNumber+1;
+
                     }else {
 
                         System.out.println("Width : " + nelement.getAttribute("Width"));
@@ -67,7 +67,7 @@ public class DomParser {
                     if(nelement.getAttribute("Height") == ""){
                         System.out.println("The Height is missing on Rectangle No: " + i);
                         missingItems.put(i," Height is missing");
-                        missingItemsNumber = missingItemsNumber+1;
+
                     }else {
                         System.out.println("Height : " + nelement.getAttribute("Height"));
                         totHeight = totHeight + Double.parseDouble(nelement.getAttribute("Height"));
@@ -78,7 +78,7 @@ public class DomParser {
                     if(nelement.getAttribute("X") == ""){
                         System.out.println("The X is missing on Rectangle No: " + i);
                         missingItems.put(i," X is missing");
-                        missingItemsNumber = missingItemsNumber+1;
+
                     }else {
                         System.out.println("X : " + nelement.getAttribute("X"));
                         totX = totX + Double.parseDouble(nelement.getAttribute("X"));
@@ -89,7 +89,7 @@ public class DomParser {
                     if(nelement.getAttribute("Y") == ""){
                         System.out.println("The Y is missing on Rectangle No: " + i);
                         missingItems.put(i," Y is missing");
-                        missingItemsNumber = missingItemsNumber+1;
+                        
                     }else {
                         System.out.println("Y : " + nelement.getAttribute("Y"));
                         totY = totY + Double.parseDouble(nelement.getAttribute("Y"));
