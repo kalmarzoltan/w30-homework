@@ -16,6 +16,7 @@ public class DomParser {
 
     String fileName;
     HashMap missingItems = new HashMap();
+    int missingItemsNumber = 0;
 
 
 
@@ -89,7 +90,7 @@ public class DomParser {
                     if(nelement.getAttribute("Y") == ""){
                         System.out.println("The Y is missing on Rectangle No: " + i);
                         missingItems.put(i," Y is missing");
-                        
+
                     }else {
                         System.out.println("Y : " + nelement.getAttribute("Y"));
                         totY = totY + Double.parseDouble(nelement.getAttribute("Y"));
@@ -105,9 +106,12 @@ public class DomParser {
 
                  if(missingItems.get(j)!=null){
                      System.out.println("The "+ j +"-th Rectangle" + missingItems.get(j));
+                     missingItemsNumber = missingItemsNumber + 1;
                  }
 
             }
+            System.out.println("----------------------------------------------");
+            System.out.println("Totally " +missingItemsNumber+ " items are missing");
 
             System.out.println("----------------------------------------------");
             System.out.println("The average Width is: " +totWidth/listLength);
