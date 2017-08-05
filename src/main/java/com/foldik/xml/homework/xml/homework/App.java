@@ -9,12 +9,13 @@ public class App {
     public static void main(String[] args) {
 
         //DomParser parser1 = new DomParser();
-        //parser1.parseWithDom();
+        //parser1.parseWithDom("C:\\Users\\Kalmi\\Documents\\homework\\xml-homework\\xml-homework\\src\\main\\resources\\rectangle-example.xml");
 
-        StaxParser parser2 = new StaxParser();
-        parser2.parseWithStax();
+        //StaxParser parser2 = new StaxParser();
+        //parser2.parseWithStax();
 
-
+        DomParser parser3 = new DomParser();
+        parser3.parseWithDom("C:\\Users\\Kalmi\\Documents\\homework\\xml-homework\\xml-homework\\src\\main\\resources\\invalid-rectangle-xml-example.xml");
 
     }
 }
